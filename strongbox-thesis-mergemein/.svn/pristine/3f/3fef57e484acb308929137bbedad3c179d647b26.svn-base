@@ -1,0 +1,48 @@
+\chapter{Future Work} \label{sec:future}
+
+\section{Integrate \SYSTEM{} Into F2FS}
+
+To provide full-disk encryption, \SYSTEM{} was designed to offer a transparent
+cryptographic layer at the block device level. Necessarily, no specialized
+file systems nor kernel interface changes are required to make use of \SYSTEM{}.
+As made evident by this research, the transparency of \SYSTEM{} is a significant
+source of overhead; \ie it is necessary for \SYSTEM{} to maintain expensive
+auxiliary metadata structures to prevent fatal overwrites by the overlying
+file system. For F2FS, this results in slowdowns of up to $3\times$ compared to
+unencrypted I/O (see \figref{microbench-f2fs}).
+
+Instead of providing a transparent cryptographic layer below the file system, we
+can conceivably do away with much of \SYSTEM{}'s auxiliary metadata management
+by integrating \SYSTEM{} directly into an overlying file system such as F2FS.
+This would provide the same functionality as a distinct \SYSTEM{} under F2FS,
+but with the performance benefit of shaving down on metadata maintenance,
+especially concerning overwrite detection and correction. For instance, with
+\SYSTEM{} integrated directly into F2FS, I/O operations can be scheduled so as
+to control the location and reduce the frequency of costly overwrites and
+garbage collection.
+
+\section{Explore the Trade-off Between Energy/Performance and Security}
+
+\SYSTEM{} utilizes ChaCha20 as its stream cipher of choice. ChaCha20 is not the
+only eligible stream cipher (see \secref{design}), nor is it the fastest in the
+ChaCha family of stream ciphers~\cite{ChaCha20}. Indeed, the twenty round
+``ChaCha20'' is the \textit{slowest} of the available ChaCha implementations,
+which include an eight and twelve round ``ChaCha8'' and ``ChaCha12''
+respectively. We selected ChaCha20 for use with \SYSTEM{} because the ChaCha
+standard considers 20 rounds, but there is to our knowledge no cryptanalytic
+threat towards the ChaCha8/12 implementations~\cite{ChaCha-Cryptanalysis}. In
+exchange for a technically looser security guarantee depending on the selected
+stream cipher, there may be navigable trade-off space to exploit for improved
+performance and/or energy/power savings.
+
+\section{Investigate ChaCha20 Energy Usage}
+
+In respect to I/O operation latency, \SYSTEM{} outperforms its counterpart dm-crypt
+with AES-XTS in the majority of cases. In respect to energy and power use per
+I/O operation, however, the matter becomes more complicated. Though it was not
+explored in this research, we noticed that \SYSTEM{}'s energy use was often
+erratic compared to dm-crypt and is deserving of further study. Ideally, we
+would achieve an increase in energy efficiency by navigating the trade-off space
+described in the previous section.
+
+\balance

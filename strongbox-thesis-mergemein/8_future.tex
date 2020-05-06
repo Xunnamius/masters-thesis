@@ -1,0 +1,70 @@
+\chapter{Future Work} \label{sec:future}
+
+\section{Integrate \SYSTEM{} Into F2FS}
+
+To provide full-disk encryption, \SYSTEM{} was designed to offer a transparent
+cryptographic layer at the block device level. Necessarily, no specialized file
+systems nor kernel interface changes are required to make use of \SYSTEM{}. As
+made evident by this research, the transparency of \SYSTEM{} is a significant
+source of overhead. Specifically, it is necessary for \SYSTEM{} to maintain
+expensive metadata structures within the cryptographic driver to prevent fatal
+overwrites by the overlying file system. These structures include the in-memory
+\emph{Merkle Tree} and disk-backed \emph{Transaction Journal}, which are checked
+on every I/O operation and updated on every write operation as well as the
+\emph{Keycount Store}, which is mutated during \SYSTEM{}'s rekeying procedure
+after an overwrite has been detected.
+
+For F2FS, this metadata maintenance results in slowdowns of up to $3\times$
+compared to unencrypted I/O (see \figref{microbench-f2fs}). This blanket expense
+is made more egregious by the fact that F2FS very rarely commits overwrites (see
+\tblref{overwrites}), making this metadata truly useful in only a few instances
+when F2FS has not triggered garbage collection.
+
+Instead of providing a transparent cryptographic layer below F2FS, we can
+conceivably do away with a significant chunk of \SYSTEM{}'s metadata management
+responsibilities by integrating the now-redundant Transaction Journal
+into F2FS's own internal metadata structure, namely the Checkpoint (CP) and
+Segment Information Table (SIT) structures which already maintain validity
+bitmaps for segments and their main area blocks. This would provide the same
+functionality as a distinct \SYSTEM{} under F2FS, but with the performance
+benefit that comes with shaving down on metadata maintenance.
+
+We can take this a step further when we consider overwrite detection and
+correction. With \SYSTEM{} integrated directly into F2FS, I/O operations can be
+scheduled so as to control the location and reduce the frequency of costly
+overwrites, perhaps even eliminating them altogether outside of garbage
+collection.
+
+\section{Explore the Trade-off Between Energy, Performance, and Security}
+
+\SYSTEM{} utilizes ChaCha20 as its stream cipher of choice. ChaCha20 is not the
+only eligible stream cipher (see \secref{design}), nor is it the fastest in the
+ChaCha family of stream ciphers~\cite{ChaCha20}. Indeed, the twenty round
+``ChaCha20'' is the \textit{slowest} of the available ChaCha implementations,
+which include an eight and twelve round ``ChaCha8'' and ``ChaCha12''
+respectively. We selected ChaCha20 for use with \SYSTEM{} because the ChaCha
+standard considers 20 rounds, but there is to our knowledge no cryptanalytic
+threat towards the ChaCha8/12 implementations~\cite{ChaCha-Cryptanalysis}. Other
+interesting stream ciphers include Rabbit, Trivium, and even AES in CTR mode.
+
+In exchange for a technically looser security guarantee depending on the
+selected stream cipher, there may be a navigable trade-off space to exploit for
+improved performance and/or energy/power savings under certain conditions. Such
+a trade-off space could be explored using our implementation of \SYSTEM{} with
+minimal API changes. \SYSTEM{}'s modular design lends itself well to the dynamic
+swapping of algorithms at runtime.
+
+\section{Investigate ChaCha20 Energy Usage}
+
+In respect to I/O operation latency, \SYSTEM{} outperforms its counterpart
+dm-crypt with AES-XTS in the majority of cases. In respect to energy and power
+use per I/O operation, however, the matter becomes more interesting. Though it
+was not explored in this research, we note that \SYSTEM{}'s energy use was
+often erratic compared to dm-crypt and is deserving of further study.
+
+Specifically, there are several \SYSTEM{} configurations where we see a
+reduction in I/O operation latency over dm-crypt accompanied by a proportional
+increase in power consumption by \SYSTEM{}. Though energy usage is outside of
+the scope of this research, this presents an immediate area for further inquiry.
+
+\balance

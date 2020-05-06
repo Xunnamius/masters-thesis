@@ -1,0 +1,614 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{BUSE}{online}{}
+  \field{sortinit}{A}
+  \field{title}{A block device in userspace}
+  \verb{url}
+  \verb https://github.com/acozzette/BUSE
+  \endverb
+  \field{year}{2012}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{DmC-Android}{online}{}
+  \field{sortinit}{A}
+  \field{title}{Android Open Source Project: Full-Disk Encryption}
+  \verb{url}
+  \verb https://source.android.com/security/encryption/full-disk
+  \endverb
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{Poly1305}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bernstein}{B.}%
+     {Daniel~J.}{D.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BDJ1}
+  \strng{fullhash}{BDJ1}
+  \field{sortinit}{B}
+  \field{title}{The Poly1305-AES message-authentication code}
+  \list{institution}{1}{%
+    {University of Illinois at Chicago}%
+  }
+  \field{type}{techreport}
+  \field{year}{2005}
+\endentry
+
+\entry{ChaCha20}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bernstein}{B.}%
+     {Daniel~J.}{D.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BDJ1}
+  \strng{fullhash}{BDJ1}
+  \field{sortinit}{B}
+  \field{title}{ChaCha, a variant of Salsa20}
+  \list{institution}{1}{%
+    {University of Illinois at Chicago}%
+  }
+  \field{type}{techreport}
+  \field{year}{2008}
+\endentry
+
+\entry{STES}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Chakraborty}{C.}%
+     {D.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mancillas-López}{M.-L.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sarkar}{S.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{cryptography;field programmable gate arrays;file
+  organisation;FPGAs-Xilinx Spartan 3;Lattice ICE40;STES;data storage
+  security;low cost scheme;multilinear hash function;pseudodot product based
+  hash function;stream cipher;tweakable enciphering
+  scheme;Ciphers;Encryption;Field programmable gate
+  arrays;Hardware;Throughput;FPGA;SD card;Tweakable enciphering scheme;USB
+  memory;disk encryption;stream ciphers}
+  \strng{namehash}{CDMLCSP1}
+  \strng{fullhash}{CDMLCSP1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1109/TC.2014.2366739
+  \endverb
+  \field{issn}{0018-9340}
+  \field{number}{9}
+  \field{pages}{2691\bibrangedash 2707}
+  \field{title}{STES: A Stream Cipher Based Low Cost Scheme for Securing Stored
+  Data}
+  \field{volume}{64}
+  \field{journaltitle}{IEEE Transactions on Computers}
+  \field{year}{2015}
+\endentry
+
+\entry{SSD}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Cornwell}{C.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{CM1}
+  \strng{fullhash}{CM1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1145/2381996.2385276
+  \endverb
+  \field{issn}{1542-7730}
+  \field{number}{10}
+  \field{pages}{30:30\bibrangedash 30:36}
+  \field{title}{Anatomy of a Solid-state Drive}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/2381996.2385276
+  \endverb
+  \field{volume}{10}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{Queue}
+  \field{month}{10}
+  \field{year}{2012}
+\endentry
+
+\entry{eMMC-standard}{online}{}
+  \field{sortinit}{E}
+  \field{title}{EMBEDDED MULTI-MEDIA CARD (e•MMC), ELECTRICAL STANDARD (5.1)}
+  \verb{url}
+  \verb https://www.jedec.org/standards-documents/results/jesd84-b51
+  \endverb
+  \field{year}{2015}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{CMC}{inbook}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Halevi}{H.}%
+     {Shai}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rogaway}{R.}%
+     {Phillip}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Boneh}{B.}%
+     {Dan}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{HSRP1}
+  \strng{fullhash}{HSRP1}
+  \field{sortinit}{H}
+  \field{booktitle}{Advances in Cryptology - CRYPTO 2003: 23rd Annual
+  International Cryptology Conference, Santa Barbara, California, USA, August
+  17-21, 2003. Proceedings}
+  \verb{doi}
+  \verb 10.1007/978-3-540-45146-4_28
+  \endverb
+  \field{isbn}{978-3-540-45146-4}
+  \field{pages}{482\bibrangedash 499}
+  \field{title}{A Tweakable Enciphering Mode}
+  \verb{url}
+  \verb http://dx.doi.org/10.1007/978-3-540-45146-4_28
+  \endverb
+  \list{location}{1}{%
+    {Berlin, Heidelberg}%
+  }
+  \field{year}{2003}
+\endentry
+
+\entry{SBD}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hein}{H.}%
+     {D.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Winter}{W.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fitzek}{F.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{cloud computing;data integrity;data protection;private key
+  cryptography;public key cryptography;storage management;trusted computing;ARM
+  TrustZone systems;ARM TrustZone trusted execution environment;Data at Rest
+  integrity;Merkle-Tree;authenticated encryption scheme;cloud
+  storage;confidential block device;cryptographic keys;cryptographic
+  methods;data confidentiality;data integrity protection;integrity protected
+  block device;memory protection;open source C software library;secure block
+  device;secure file systems;secure storage trusted
+  application;secure-flexible-efficient-data storage;trusted computing base
+  solution;Cryptography;Hardware;Kernel;Memory;Program processors;Secure
+  storage;ARM TrustZone;Authenicated Encryption;Merkle-Tree;Secure
+  storage;Trusted Applications}
+  \strng{namehash}{HDWJFA1}
+  \strng{fullhash}{HDWJFA1}
+  \field{sortinit}{H}
+  \field{booktitle}{2015 IEEE Trustcom/BigDataSE/ISPA}
+  \verb{doi}
+  \verb 10.1109/Trustcom.2015.378
+  \endverb
+  \field{pages}{222\bibrangedash 229}
+  \field{title}{Secure Block Device -- Secure, Flexible, and Efficient Data
+  Storage for ARM TrustZone Systems}
+  \field{volume}{1}
+  \field{year}{2015}
+\endentry
+
+\entry{NILFS}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Konishi}{K.}%
+     {Ryusuke}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Amagai}{A.}%
+     {Yoshiji}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sato}{S.}%
+     {Koji}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hifumi}{H.}%
+     {Hisashi}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kihara}{K.}%
+     {Seiji}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Moriai}{M.}%
+     {Satoshi}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{KRAYSKHHKSMS1}
+  \strng{fullhash}{KRAYSKHHKSMS1}
+  \field{sortinit}{K}
+  \verb{doi}
+  \verb 10.1145/1151374.1151375
+  \endverb
+  \field{issn}{0163-5980}
+  \field{number}{3}
+  \field{pages}{102\bibrangedash 107}
+  \field{title}{The Linux Implementation of a Log-structured File System}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/1151374.1151375
+  \endverb
+  \field{volume}{40}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{SIGOPS Oper. Syst. Rev.}
+  \field{month}{07}
+  \field{year}{2006}
+\endentry
+
+\entry{F2FS}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Lee}{L.}%
+     {Changman}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sim}{S.}%
+     {Dongho}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hwang}{H.}%
+     {Jooyoung}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cho}{C.}%
+     {Sangyeun}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {USENIX Association}%
+  }
+  \strng{namehash}{LCSDHJCS1}
+  \strng{fullhash}{LCSDHJCS1}
+  \field{sortinit}{L}
+  \field{booktitle}{13th USENIX Conference on File and Storage Technologies
+  (FAST 15)}
+  \field{isbn}{978-1-931971-201}
+  \field{pages}{273\bibrangedash 286}
+  \field{title}{F2FS: A New File System for Flash Storage}
+  \verb{url}
+  \verb https://www.usenix.org/conference/fast15/technical-sessions/presentatio
+  \verb n/lee
+  \endverb
+  \list{location}{1}{%
+    {Santa Clara, CA}%
+  }
+  \field{year}{2015}
+\endentry
+
+\entry{TrustZone}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Limited}{L.}%
+     {ARM}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LA1}
+  \strng{fullhash}{LA1}
+  \field{sortinit}{L}
+  \field{note}{PRD29-GENC-009492C}
+  \field{title}{ARM security technology: Building a secure system using
+  TrustZone technology}
+  \field{year}{2009}
+\endentry
+
+\entry{dmcrypt}{online}{}
+  \field{sortinit}{L}
+  \field{title}{Linux kernel device-mapper crypto target}
+  \verb{url}
+  \verb https://gitlab.com/cryptsetup/cryptsetup
+  \endverb
+  \field{year}{2013}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{ChaCha-Cryptanalysis}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Maitra}{M.}%
+     {Subhamoy}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MS1}
+  \strng{fullhash}{MS1}
+  \field{sortinit}{M}
+  \field{title}{Chosen IV Cryptanalysis on Reduced Round ChaCha and Salsa}
+  \list{institution}{1}{%
+    {Applied Statistics Unit, Indian Statistical Institute}%
+  }
+  \field{type}{techreport}
+  \field{year}{2015}
+\endentry
+
+\entry{ZFS}{online}{}
+  \field{sortinit}{O}
+  \field{title}{Oracle blog: ZFS End-to-End Data Integrity}
+  \verb{url}
+  \verb https://blogs.oracle.com/bonwick/zfs-end-to-end-data-integrity
+  \endverb
+  \field{year}{2005}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{NISTXTS}{misc}{}
+  \field{sortinit}{R}
+  \field{note}{NIST Special Publication 800-38E}
+  \field{title}{Recommendation for Block Cipher Modes of Operation: The XTS-AES
+  Mode for Confidentiality on Storage Devices}
+  \verb{url}
+  \verb http://nvlpubs.nist.gov/
+  \endverb
+  \field{year}{2010}
+\endentry
+
+\entry{LinuxDeviceMapper}{online}{}
+  \field{sortinit}{R}
+  \field{title}{RedHat: Device-mapper Resource Page}
+  \verb{url}
+  \verb https://www.sourceware.org/dm
+  \endverb
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{XEX}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rogaway}{R.}%
+     {Phillip}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RP1}
+  \strng{fullhash}{RP1}
+  \field{sortinit}{R}
+  \field{title}{Efficient Instantiations of Tweakable Blockciphers and
+  Refinements to Modes OCB and PMAC}
+  \list{institution}{1}{%
+    {University of California at Davis}%
+  }
+  \field{type}{techreport}
+  \field{year}{2004}
+\endentry
+
+\entry{LFS}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Rosenblum}{R.}%
+     {Mendel}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ousterhout}{O.}%
+     {John~K.}{J.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \keyw{Unix, disk storage management, fast crash recovery, file system
+  organization, file system performance, high write performance,
+  log-structured, logging}
+  \strng{namehash}{RMOJK1}
+  \strng{fullhash}{RMOJK1}
+  \field{sortinit}{R}
+  \verb{doi}
+  \verb 10.1145/146941.146943
+  \endverb
+  \field{issn}{0734-2071}
+  \field{number}{1}
+  \field{pages}{26\bibrangedash 52}
+  \field{title}{The Design and Implementation of a Log-structured File System}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/146941.146943
+  \endverb
+  \field{volume}{10}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{ACM Trans. Comput. Syst.}
+  \field{month}{02}
+  \field{year}{1992}
+\endentry
+
+\entry{TES-From-Stream-Cipher}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sarkar}{S.}%
+     {Palash}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{sortinit}{S}
+  \field{title}{Tweakable Enciphering Schemes From Stream Ciphers With IV}
+  \list{institution}{1}{%
+    {Indian Statistical Institute}%
+  }
+  \field{type}{techreport}
+  \field{year}{2009}
+\endentry
+
+\entry{TEE}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Technology}{T.}%
+     {Global Platform~Device}{G.~P.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TGPD1}
+  \strng{fullhash}{TGPD1}
+  \field{sortinit}{T}
+  \field{note}{GPD\_SPE\_007}
+  \field{title}{TEE client API specification version 1.0}
+  \field{year}{2010}
+\endentry
+
+\entry{XTS}{misc}{}
+  \field{sortinit}{T}
+  \field{note}{IEEE Std 1619-2007}
+  \field{title}{The XTS-AES Tweakable Block Cipher}
+  \field{year}{2008}
+\endentry
+
+\entry{google-blog}{online}{}
+  \field{sortinit}{T}
+  \field{title}{TLS Symmetric Crypto}
+  \verb{url}
+  \verb https://www.imperialviolet.org/2014/02/27/tlssymmetriccrypto.html
+  \endverb
+  \field{year}{2014}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
+\entry{HCTR}{inbook}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Wang}{W.}%
+     {Peng}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Feng}{F.}%
+     {Dengguo}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wu}{W.}%
+     {Wenling}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{3}{}{%
+    {{}%
+     {Feng}{F.}%
+     {Dengguo}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lin}{L.}%
+     {Dongdai}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yung}{Y.}%
+     {Moti}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{WPFDWW1}
+  \strng{fullhash}{WPFDWW1}
+  \field{sortinit}{W}
+  \field{booktitle}{Information Security and Cryptology: First SKLOIS
+  Conference, CISC 2005, Beijing, China, December 15-17, 2005. Proceedings}
+  \verb{doi}
+  \verb 10.1007/11599548_15
+  \endverb
+  \field{isbn}{978-3-540-32424-9}
+  \field{pages}{175\bibrangedash 188}
+  \field{title}{HCTR: A Variable-Input-Length Enciphering Mode}
+  \verb{url}
+  \verb http://dx.doi.org/10.1007/11599548_15
+  \endverb
+  \list{location}{1}{%
+    {Berlin, Heidelberg}%
+  }
+  \field{year}{2005}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

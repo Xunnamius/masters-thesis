@@ -1,0 +1,83 @@
+\section{Related Work} \label{sec:related}
+
+% They use block ciphers, we use stream ciphers
+Some of the most popular cryptosystems offering a confidentiality guarantee for
+data at rest employ a symmetric encryption scheme known as a Tweakable
+Enciphering Scheme (TES)~\cite{STES,XEX}. There have been numerous TES-based
+constructions proposed for securing data at rest~\cite{STES,CMC,HCTR},
+including the well known XEX-based XTS operating mode of AES~\cite{XTS} explored
+earlier in this work. Almost all TES constructions and the storage management
+systems that implement them use one or more block ciphers as their primary
+primitive~\cite{TES-From-Stream-Cipher,STES}.
+
+% We look a lot like a dm-crypt replacement...
+Our \SYSTEM{} implementation borrows from the design of these systems. One in
+particular is \emph{dm-crypt}, a Linux framework employing a
+\textit{LinuxDeviceMapper} to provide a virtual block interface for physical
+block devices. Dm-crypt provides an implementation of the AES-XTS algorithm among
+others and is used widely in the Linux ecosystem~\cite{DmC-Android, dmcrypt}.
+The algorithms provided by dm-crypt all employ block ciphers~\cite{dmcrypt}.
+Instead of a block ciphers, however, \SYSTEM{} uses a stream cipher to provide
+the same confidentiality guarantee and consistent or better I/O performance.
+Further unlike dm-crypt and other similar virtualization frameworks, \SYSTEM{}'s
+ciphering operations do not require sector level tweaks, depending on the
+implementation. With \SYSTEM{}, several physical blocks consisting of one or
+more sectors are considered as discrete logical units, \ie nuggets and flakes.
+
+% Talk about STES and how we're different (and more general purpose).
+Substituting a block cipher for a stream cipher forms the core of several
+contributions to the state-of-the-art~\cite{STES, TES-From-Stream-Cipher}.
+Chakraborty et al. proposed STES---a stream cipher based low cost scheme for
+securing stored data~\cite{STES}. STES is a novel TES which can be implemented
+compactly with low overall power consumption. It combines a stream cipher and a
+universal hash function via XOR and is targeting low cost FPGAs to provide
+confidentiality of data on USBs and SD cards. Our \SYSTEM{}, on the other hand,
+is not a TES and does not directly implement a TES. \SYSTEM{} combines a stream
+cipher with nonce ``tweak'' and nugget data via XOR and is targeting any
+configuration employing a well-behaved Log-Structured Filesystem at some level
+(LFS) to provide confidentiality of data.
+
+% We're supposed to be a transparent layer at the block device level, but that's
+% not novel either. Talk about SBD a bit. Talk about how we're different.
+Offering a transparent cryptographic layer at the block device level has been
+proposed numerous times~\cite{SBD}. Production implementations include storage
+management systems like dm-crypt. Specifically, Hein et al. proposed the Secure
+Block Device (SBD)~\cite{SBD}---an ARM TrustZone secure world transparent
+filesystem encryption layer optimized for ANDIX OS and implemented and evaluated
+using the Linux Network Block Device (NBD) driver. \SYSTEM{} was also
+implemented and evaluated using the NBD, but is not limited to one specific
+operating system. Further unlike \SYSTEM{}, SBD was not explicitly designed for
+use outside of the ARM TrustZone secure world. Contrarily, \SYSTEM{} was
+designed to be used on any system that provides a subset of functionality
+provided by a Trusted Platform Module (TPM) and/or Trusted Execution Environment
+(TEE). Specifically, \SYSTEM{} requires the availability of a dedicated hardware
+protected secure monotonic counter to prevent rollback attacks and ensure the
+freshness of \SYSTEM{}. The primary design goal of \SYSTEM{} was to achieve
+performance parity with the industry standard AES-XTS algorithm while taking
+advantage of the speedup gained by utilizing a stream cipher in place of both
+AES and the XTS operating mode.
+
+% The integrity protection scheme used by \SYSTEM{} is not novel. ZFS, SBD, etc.
+% uses it. We use it to to provide integrity protection. The Merkle Tree
+% approach is well-studied and we know it works. AES-XTS doesn't do integrity
+% protection though.
+Achieving on-disk data integrity protection through the use of checksums has
+been used by filesystems and many other storage management systems. Examples
+include ZFS~\cite{ZFS} and others~\cite{SBD}. For our implementation of
+\SYSTEM{}, we used the Merkle Tree library offered by SBD to manage our in-
+memory checksum verification. An implementation of \SYSTEM{} need not use the
+SDB SHA-256 Merkle Tree library. It was chosen for convenience.
+
+\PUNT{The use of journaling in the design is also not novel, though it's also not
+meant to serve as a replacement for the overlying filesystem's crash recovery
+and journaling functionality. Like Ext4 ordered journaling mode, we employ a light or
+``ordered'' journaling in that we commit our metadata first and then immediately
+push data out to secondary storage. Our implementation of \SYSTEM{} implements
+rekeying is implemented in as full journaling}
+
+% TODO (maybe later?): Add one more thing where you talk about AES and say that we provide
+% stronger guarantees; STES, it needs one more sentence about why securing data
+% on a flash drive attached to an FPGA is different than a flash drive attached
+% to a processor
+
+% Any SOSP/OSDI papers to talk about?
