@@ -75,7 +75,7 @@
 			\MakeUppercase{\@author}\\
 			\vspace{0.8in}
 			CHICAGO, ILLINOIS\\
-			\MakeUppercase{June 2020}
+			\MakeUppercase{July 2017}
 			\vspace*{0.45in}
 		\end{center}
 	\end{titlepage}
