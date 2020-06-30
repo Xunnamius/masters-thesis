@@ -1,0 +1,71 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{v}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{vi}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgments}{vii}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{viii}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Motivation}{4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Performance Potential}{4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Append-mostly Filesystems}{4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Threat Model}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}StrongBox{} System Design}{7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Backing Store Function and Layout}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Metadata-aware Cryptographic Driver}{11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Transaction Journal}{11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Merkle Tree}{13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Keycount Store}{14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}Rekeying Procedure}{14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Defending Against Rollbacks: Global Version Counter}{15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}StrongBox{} Implementation}{17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Deriving Subkeys}{17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}A Secure, Persistent Counter}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}LFS Garbage Collection}{19}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluation}{20}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Experimental Setup}{20}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Experimental Results}{20}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}StrongBox{} Read Performance}{22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}StrongBox{} Write Performance}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}On Replacing dm-crypt and Ext4}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}Performance in StrongBox{}: ChaCha20 vs AES}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Overhead with a Full Disk}{26}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Related Work}{31}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Conclusion}{33}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Future Work}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Integrate StrongBox{} Into F2FS}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Explore the Trade-off Between Energy, Performance, and Security}{35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Investigate ChaCha20 Energy Usage}{35}% 

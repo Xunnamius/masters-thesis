@@ -1,2 +1,0 @@
-index f2fs-bl4k-r f2fs-bl4k-w f2fs-sb4k-r f2fs-sb4k-w spacer0 spacer1 f2fs-bl512k-r f2fs-bl512k-w f2fs-sb512k-r f2fs-sb512k-w spacer2 spacer3 f2fs-bl5m-r f2fs-bl5m-w f2fs-sb5m-r f2fs-sb5m-w spacer4 spacer5 f2fs-bl40m-r f2fs-bl40m-w f2fs-sb40m-r f2fs-sb40m-w
-1 0.59 0.4 0.88 3.23 0 0 0.28 0.34 0.62 3.03 0 0 0.27 0.38 0.93 2.84 0 0 0.21 0.33 0.66 2.83 0 0 0.29 0.36 0.75 2.97

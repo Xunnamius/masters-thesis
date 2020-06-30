@@ -1,0 +1,25 @@
+\abstract
+Full disk encryption (FDE) is especially important for mobile devices because
+they both contain large amounts of sensitive data and are easily lost or stolen.
+Yet, the conventional approach to FDE, AES in XTS mode, is 3--$5\times$ slower
+than unencrypted storage. Authenticated encryption based on stream ciphers like
+ChaCha20 is already used as a faster alternative to AES in other contexts, such
+as HTTPS, but the conventional wisdom is that stream ciphers are a unsuitable
+for FDE. Used naively in disk encryption, stream ciphers are vulnerable to
+many-time pad attacks and rollback attacks, and mitigating these attacks with
+on-disk metadata is generally believed to ruin performance.
+
+In this paper, we argue that recent developments in mobile devices invalidate
+this assumption and make it possible to use fast stream ciphers for disk
+encryption. Modern mobile devices use Log-structured File Systems and include
+trusted hardware such as Trusted Execution Environments (TEEs) and secure
+storage areas. Leveraging these two trends, we propose \SYSTEM{}, a stream
+cipher-based FDE layer that is a drop-in replacement for dm-crypt, the standard
+Linux disk encryption module based on AES-XTS. \SYSTEM{} introduces a system
+design and on-disk data structures that exploit LFS's lack of overwrites to
+avoid costly rekeying and a counter stored in trusted hardware to implement
+rollback protection. We implement \SYSTEM{} on an ARM big.LITTLE mobile
+processor and test its performance under multiple popular production LFSes. We
+find that \SYSTEM{} generally improves read performance by over $1.6\times$ and
+write performance by over $1.2\times$ compared to dm-crypt while offering
+stronger integrity guarantees.
